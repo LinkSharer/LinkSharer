@@ -1,0 +1,40 @@
+:root {
+	--page-bg-color: #dbdbdb;
+	--page-font-family: 'DM Sans', sans-serif;
+
+	--profile-avatar-dim: 100px;
+	--profile-name-color: #061492;
+	--profile-name-line-height: 1.5;
+	--profile-name-font-weight: 700;
+	--profile-name-font-size: 20px;
+	--profile-description-color: #061492;
+	--profile-description-line-height: 1.5;
+	--profile-description-font-weight: 500;
+	--profile-description-font-size: 16px;
+
+	--link-text-color: rgb(6, 20, 146);
+	--link-text-color-hover: #fff;
+	--link-text-font-size: 16px;
+	--link-text-font-weight: 500;
+	--link-bg-color: transparent;
+	--link-bg-color-hover: rgb(6, 20, 146);
+	--link-border: 2px solid rgb(6, 20, 146);
+	--link-padding: 20px;
+	--link-border-radius: 10px;
+	--link-transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99),
+		color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99),
+		border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99),
+		transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99),
+		background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
+	--links-gap: 10px;
+
+	--social-text-color: rgb(6, 20, 146);
+	--social-padding: 10px;
+	--social-height: 50px;
+	--social-dim: 30px;
+	--social-dim-hover: 35px;
+	--social-transition: font-size 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+	--credits-text-color: rgb(6, 20, 146);
+	--credits-font-size: 10px;
+}

@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check if CNAME is set
+        id: check_cname
+        run: |
+          # Extract the cname value from the line, accounting for trailing commas
+          cname=$(awk -F 'cname: ' '/cname:/ {gsub(/,/, "", $2); print $2}' user/config.ts | tr -d '"')
+          if [ -n "$cname" ]; then
+            echo "CNAME=$cname" >> $GITHUB_ENV
+            echo "::set-output name=cname::$cname"
+            echo "CNAME file will be created with $cname"
+          else
+            echo "No cname found in config.ts"
+            echo "::set-output name=cname::"
+          fi
+
+      - name: Build
+        env:
+          BASE_PATH: ${{ steps.check_cname.outputs.cname != '' && '/' || '/${{ github.event.repository.name }}' }}
+        run: |
+          if [ -n "${{ steps.check_cname.outputs.cname }}" ]; then
+            echo "Base path set to /"
+          else
+            echo "Base path set to '/${{ github.event.repository.name }}'"
+          fi
+          npm run build
+
+      - name: Create CNAME
+        if: env.CNAME != ''
+        run: echo ${{ env.CNAME }} > ./build/CNAME
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com

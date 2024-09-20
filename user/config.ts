@@ -5,7 +5,7 @@ const config: Config = {
 	cname: 'demo.linksharer.js.org',
 	seo: {
 		title: 'Demo | LinkSharer',
-		description: "LinkSharer' Demo website.",
+		description: "LinkSharer's Demo website.",
 	},
 	user: {
 		name: 'LinkSharer',

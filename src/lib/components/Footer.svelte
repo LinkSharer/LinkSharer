@@ -6,7 +6,10 @@
 	<footer>
 		<p>
 			This website was made with
-			<a href="https://github.com/LinkSharer/LinkSharer" rel="noopener noreferrer external">
+			<a
+				href="https://linksharer.js.org?utm_source=generated_website&utm_medium=credits&utm_campaign=project_usage&utm_content=footer"
+				rel="external"
+			>
 				LinkSharer
 			</a>
 		</p>

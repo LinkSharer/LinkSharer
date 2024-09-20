@@ -10,7 +10,7 @@
 	export let data;
 
 	const template = data.config.template.startsWith('@')
-		? `https://linksharer.github.io/Templates/templates/${data.config.template.slice(1)}`
+		? `https://linksharer.github.io/Templates/templates/${data.config.template.slice(1)}.css`
 		: data.config.template;
 </script>
 

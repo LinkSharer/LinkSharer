@@ -1,7 +1,7 @@
 import type { Config } from '../src/lib/types/config';
 
 const config: Config = {
-	template: 'template.css',
+	template: '@pretty.css',
 	cname: 'demo.linksharer.js.org',
 	seo: {
 		title: 'Demo | LinkSharer',

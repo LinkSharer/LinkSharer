@@ -8,12 +8,16 @@
 	import { dev } from '$app/environment';
 
 	export let data;
+
+	const template = data.config.template.startsWith('@')
+		? `https://linksharer.github.io/Templates/templates/${data.config.template.slice(1)}`
+		: data.config.template;
 </script>
 
 <Seo {...data.config.seo} />
 
 <svelte:head>
-	<link rel="stylesheet" href={data.config.template} />
+	<link rel="stylesheet" href={template} />
 </svelte:head>
 
 <div class="container">

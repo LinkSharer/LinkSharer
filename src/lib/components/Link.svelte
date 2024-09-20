@@ -11,24 +11,26 @@
 		.join(' ');
 </script>
 
-<a
-	href={link.url}
-	target="_{link.target ?? 'self'}"
-	itemprop={link.sameAs ? 'sameAs' : undefined}
-	{rel}
->
-	<li>
+<li>
+	<a
+		href={link.url}
+		target="_{link.target ?? 'self'}"
+		itemprop={link.sameAs ? 'sameAs' : undefined}
+		{rel}
+	>
 		<i class={link.icon} />
 		{link.name}
-	</li>
-</a>
+	</a>
+</li>
 
 <style lang="scss">
-	a {
-		text-decoration: none;
+	li {
+		list-style: none;
 
-		li {
-			list-style: none;
+		a {
+			text-decoration: none;
+			width: 100%;
+      display: inline-block;
 			color: var(--link-text-color);
 			padding: var(--link-padding);
 			background-color: var(--link-bg-color);

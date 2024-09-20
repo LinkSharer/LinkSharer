@@ -4,33 +4,33 @@
 	export let social: Social;
 </script>
 
-<a
-	href={social.url}
-	target="_{social.target ?? 'self'}"
-	itemprop="sameAs"
-	rel="noopener noreferrer"
->
-	<li>
+<li>
+	<a
+		href={social.url}
+		target="_{social.target ?? 'self'}"
+		itemprop="sameAs"
+		rel="noopener noreferrer"
+	>
 		<i class={social.icon} />
-	</li>
-</a>
+	</a>
+</li>
 
 <style lang="scss">
-	a {
-		text-decoration: none;
+	li {
+		list-style: none;
+		text-align: center;
+		padding: var(--social-padding);
+		height: var(--social-height);
+		display: flex;
+		align-items: center;
 
-		li {
-			list-style: none;
-			text-align: center;
+		&:hover {
+			color: var(--social-text-color-hover);
+		}
+
+		a {
+			text-decoration: none;
 			color: var(--social-text-color);
-			padding: var(--social-padding);
-			height: var(--social-height);
-			display: flex;
-			align-items: center;
-
-			&:hover {
-				color: var(--social-text-color-hover);
-			}
 
 			i {
 				font-size: var(--social-dim);

@@ -13,6 +13,13 @@ const config: Config = {
 		avatar: 'avatar.png',
 	},
 	links: [
+    {
+      name: 'Documentation',
+      url: 'https://linksharer.js.org',
+      icon: 'fa-regular fa-file',
+      sameAs: true,
+      external: true,
+    },
 		{
 			name: 'Github',
 			url: 'https://github.com/LinkSharer/LinkSharer',

@@ -30,7 +30,7 @@
 		a {
 			text-decoration: none;
 			width: 100%;
-      display: inline-block;
+			display: inline-block;
 			color: var(--link-text-color);
 			padding: var(--link-padding);
 			background-color: var(--link-bg-color);

@@ -13,13 +13,13 @@ const config: Config = {
 		avatar: 'avatar.png',
 	},
 	links: [
-    {
-      name: 'Documentation',
-      url: 'https://linksharer.js.org',
-      icon: 'fa-regular fa-file',
-      sameAs: true,
-      external: true,
-    },
+		{
+			name: 'Documentation',
+			url: 'https://linksharer.js.org',
+			icon: 'fa-regular fa-file',
+			sameAs: true,
+			external: true,
+		},
 		{
 			name: 'Github',
 			url: 'https://github.com/LinkSharer/LinkSharer',
@@ -51,10 +51,12 @@ const config: Config = {
 		{
 			url: 'https://github.com/LinkSharer/LinkSharer',
 			icon: 'fa-brands fa-github',
+			name: "LinkSharer's GitHub Account",
 		},
 		{
 			url: 'mailto:sebastiano@racca.me',
 			icon: 'fa-solid fa-envelope',
+			name: "Sebastiano Racca's Email",
 		},
 	],
 };

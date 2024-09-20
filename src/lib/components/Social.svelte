@@ -10,6 +10,7 @@
 		target="_{social.target ?? 'self'}"
 		itemprop="sameAs"
 		rel="noopener noreferrer"
+		aria-label={social.name}
 	>
 		<i class={social.icon} />
 	</a>

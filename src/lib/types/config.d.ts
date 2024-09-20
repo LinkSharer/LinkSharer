@@ -9,6 +9,7 @@ export interface Config {
 	links: Link[];
 	socials?: Social[];
 	credits?: boolean;
+	analytics?: boolean;
 }
 
 export interface User {

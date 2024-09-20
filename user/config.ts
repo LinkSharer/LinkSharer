@@ -3,6 +3,7 @@ import type { Config } from '../src/lib/types/config';
 const config: Config = {
 	template: '@minimal-blue',
 	cname: 'demo.linksharer.js.org',
+	analytics: true,
 	seo: {
 		title: 'Demo | LinkSharer',
 		description: "LinkSharer's Demo website.",

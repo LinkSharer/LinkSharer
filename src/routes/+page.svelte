@@ -20,6 +20,17 @@
 	<link rel="stylesheet" href={template} />
 </svelte:head>
 
+{#if !dev && data.config.analytics}
+	<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+	<noscript>
+		<img
+			src="https://queue.simpleanalyticscdn.com/noscript.gif"
+			alt=""
+			referrerpolicy="no-referrer-when-downgrade"
+		/>
+	</noscript>
+{/if}
+
 <div class="container">
 	<main>
 		<UserInfo user={data.config.user} />

@@ -1,5 +1,8 @@
 import type { Link } from './link';
 import type { Social } from './social';
+import type { SEO } from './seo';
+import type { Script } from './script';
+import type { User } from './user';
 
 export interface Config {
 	/**
@@ -45,45 +48,4 @@ export interface Config {
 	 * An array of scripts
 	 */
 	scripts?: Script[];
-}
-
-export interface User {
-	/**
-	 * The name of the user
-	 */
-	name: string;
-	/**
-	 * A small description of user
-	 */
-	bio: string;
-	/**
-	 * The avatar to be displayed along the other information about the user
-	 */
-	avatar: string;
-}
-
-export interface SEO {
-	/**
-	 * The <title> tag
-	 */
-	title: string;
-	/**
-	 * A description of the website
-	 */
-	description: string;
-}
-
-export interface Script {
-	/**
-	 * The src atribute of the <script> tag
-	 */
-	src: string;
-	/**
-	 * Whether the script should be included in the <head> or in the <body> tag
-	 */
-	head?: boolean;
-	/**
-	 * Any other key-value pair like `async` or `defer`
-	 */
-	[key: string]: any;
 }

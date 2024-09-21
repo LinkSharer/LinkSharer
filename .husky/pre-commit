@@ -1,2 +1,17 @@
 #!/usr/bin/env sh
+git stash -q --keep-index
+
 npm run format
+FORMAT_EXIT_CODE=$?
+
+if [ $FORMAT_EXIT_CODE -ne 0 ]; then
+  echo "Code formatting failed. Please fix the issues and try again."
+  git stash pop -q
+  exit 1
+fi
+
+git add -u
+
+git stash pop -q
+
+exit $FORMAT_EXIT_CODE

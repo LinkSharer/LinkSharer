@@ -53,6 +53,7 @@
 
 	.linksharer {
 		min-height: 100vh;
+		font-family: 'DM Sans', sans-serif;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

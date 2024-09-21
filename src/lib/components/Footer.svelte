@@ -3,7 +3,7 @@
 </script>
 
 {#if showCredits}
-	<footer>
+	<footer class="credits">
 		<p>
 			This website was made with
 			<a
@@ -18,13 +18,12 @@
 
 <style lang="scss">
 	p {
-		color: var(--credits-text-color);
-		font-size: var(--credits-font-size);
+		font-size: 10px;
 		text-align: center;
 		margin: 10px;
 
 		a {
-			color: var(--credits-text-color);
+			color: inherit;
 		}
 	}
 </style>

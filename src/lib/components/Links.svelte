@@ -5,7 +5,7 @@
 	export let links: Link[];
 </script>
 
-<section>
+<section class="links">
 	<ul>
 		{#each links as link}
 			<LinkElement {link} />
@@ -18,7 +18,7 @@
 		padding-left: 0;
 		display: flex;
 		flex-direction: column;
-		gap: var(--links-gap);
+		gap: 10px;
 		margin: 30px 0 15px 0;
 	}
 </style>

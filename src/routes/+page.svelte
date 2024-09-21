@@ -31,7 +31,7 @@
 	</noscript>
 {/if}
 
-<div class="container">
+<div class="linksharer">
 	<main>
 		<UserInfo user={data.config.user} />
 		<Links links={data.config.links} />
@@ -51,14 +51,12 @@
 		font-weight: normal;
 	}
 
-	.container {
+	.linksharer {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background: var(--page-bg-color);
-		font-family: var(--page-font-family);
 
 		main {
 			min-width: 30%;

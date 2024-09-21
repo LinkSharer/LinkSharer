@@ -5,7 +5,7 @@
 	export let socials: Social[];
 </script>
 
-<article>
+<article class="socials">
 	<ul>
 		{#each socials as social}
 			<SocialElement {social} />

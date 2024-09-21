@@ -4,7 +4,7 @@
 	export let social: Social;
 </script>
 
-<li>
+<li class="social">
 	<a
 		href={social.url}
 		target="_{social.target ?? 'self'}"
@@ -20,25 +20,21 @@
 	li {
 		list-style: none;
 		text-align: center;
-		padding: var(--social-padding);
-		height: var(--social-height);
+		padding: 10px;
+		height: 50px;
 		display: flex;
 		align-items: center;
 
-		&:hover {
-			color: var(--social-text-color-hover);
-		}
-
 		a {
 			text-decoration: none;
-			color: var(--social-text-color);
+			color: inherit;
 
 			i {
-				font-size: var(--social-dim);
-				transition: var(--social-transition);
+				font-size: 30px;
+				transition: font-size 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
 				&:hover {
-					font-size: var(--social-dim-hover);
+					font-size: 35px;
 				}
 			}
 		}

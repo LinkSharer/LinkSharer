@@ -11,7 +11,7 @@
 		.join(' ');
 </script>
 
-<li>
+<li class="link">
 	<a
 		href={link.url}
 		target="_{link.target ?? 'self'}"
@@ -28,22 +28,19 @@
 		list-style: none;
 
 		a {
+			color: inherit;
 			text-decoration: none;
 			width: 100%;
 			display: inline-block;
-			color: var(--link-text-color);
-			padding: var(--link-padding);
-			background-color: var(--link-bg-color);
-			border: var(--link-border);
-			transition: var(--link-transition);
-			border-radius: var(--link-border-radius);
-			font-size: var(--link-text-font-size);
-			font-weight: var(--link-text-font-weight);
-
-			&:hover {
-				color: var(--link-text-color-hover);
-				background-color: var(--link-bg-color-hover);
-			}
+			padding: 20px;
+			font-size: 16px;
+			font-weight: 500;
+			transition:
+				box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99),
+				color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99),
+				border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99),
+				transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99),
+				background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
 		}
 	}
 </style>

@@ -57,7 +57,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: var(--page-bg-color);
+		background: var(--page-bg-color);
 		font-family: var(--page-font-family);
 
 		main {

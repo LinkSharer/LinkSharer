@@ -5,7 +5,7 @@ export interface Config {
 	/**
 	 * CSS Template to use
 	 *
-	 * @examples "@minimal-blue", "myTemplate.css", "https://example.com/myTemplate.css"
+	 * @example "@minimal-blue", "myTemplate.css", "https://example.com/myTemplate.css"
 	 * @see https://linksharer.js.org/docs/templates
 	 */
 	template: string;
@@ -41,6 +41,10 @@ export interface Config {
 	 * @see https://linksharer.js.org/docs/analytics
 	 */
 	analytics?: boolean;
+	/**
+	 * An array of scripts
+	 */
+	scripts?: Script[];
 }
 
 export interface User {
@@ -67,4 +71,19 @@ export interface SEO {
 	 * A description of the website
 	 */
 	description: string;
+}
+
+export interface Script {
+	/**
+	 * The src atribute of the <script> tag
+	 */
+	src: string;
+	/**
+	 * Whether the script should be included in the <head> or in the <body> tag
+	 */
+	head?: boolean;
+	/**
+	 * Any other key-value pair like `async` or `defer`
+	 */
+	[key: string]: any;
 }

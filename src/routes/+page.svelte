@@ -12,12 +12,29 @@
 	const template = data.config.template.startsWith('@')
 		? `https://linksharer.github.io/Templates/templates/${data.config.template.slice(1)}.css`
 		: data.config.template;
+
+	let scripts: { head: { [key: string]: any }[]; body: { [key: string]: any }[] } = {
+		head: [],
+		body: [],
+	};
+
+	data.config.scripts?.forEach((s) => {
+		const { head, ...obj } = s;
+
+		scripts[head ? 'head' : 'body'].push(obj);
+	});
 </script>
 
 <Seo {...data.config.seo} />
 
 <svelte:head>
 	<link rel="stylesheet" href={template} />
+
+	{#if scripts.head}
+		{#each scripts.head as scr}
+			<script {...scr}></script>
+		{/each}
+	{/if}
 </svelte:head>
 
 {#if !dev && data.config.analytics}
@@ -43,6 +60,12 @@
 
 	<Footer showCredits={data.config.credits || true} />
 </div>
+
+{#if scripts.body}
+	{#each scripts.body as scr}
+		<script {...scr}></script>
+	{/each}
+{/if}
 
 <style lang="scss">
 	:global(*, *::before, *::after) {

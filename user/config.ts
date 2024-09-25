@@ -7,6 +7,20 @@ const config: Config = {
 	seo: {
 		title: 'Demo | LinkSharer',
 		description: "LinkSharer's Demo website.",
+		canonical: 'https://demo.linksharer.js.org',
+		og: {
+			site_name: 'Demo | LinkSharer',
+			title: 'Demo | LinkSharer',
+			description: "LinkSharer's Demo website.",
+			url: 'https://demo.linksharer.js.org?utm_medium=social',
+			type: 'website',
+		},
+		twitter: {
+			title: 'Demo | LinkSharer',
+			description: "LinkSharer's Demo website.",
+			card: 'summary',
+			url: 'https://demo.linksharer.js.org?utm_source=twitter&utm_medium=social',
+		},
 	},
 	user: {
 		name: 'LinkSharer',

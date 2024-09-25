@@ -25,7 +25,7 @@
 	});
 </script>
 
-<Seo {...data.config.seo} />
+<Seo seo={data.config.seo} />
 
 <svelte:head>
 	<link rel="stylesheet" href={template} />

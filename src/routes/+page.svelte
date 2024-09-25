@@ -50,7 +50,7 @@
 
 <div class="linksharer">
 	<main>
-		<UserInfo user={data.config.user} />
+		<UserInfo user={data.config.user} i18n={data.config.i18n} />
 		<Links links={data.config.links} />
 
 		{#if data.config.socials}
@@ -58,7 +58,7 @@
 		{/if}
 	</main>
 
-	<Footer showCredits={data.config.credits || true} />
+	<Footer showCredits={data.config.credits || true} i18n={data.config.i18n} />
 </div>
 
 {#if scripts.body}

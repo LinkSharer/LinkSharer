@@ -1,8 +1,10 @@
+import i18n from '$lib/i18n/en';
 import type { Config } from '../src/lib/types/config';
 
 const config: Config = {
 	template: '@monochrome',
 	cname: 'demo.linksharer.js.org',
+	i18n,
 	analytics: true,
 	seo: {
 		title: 'Demo | LinkSharer',

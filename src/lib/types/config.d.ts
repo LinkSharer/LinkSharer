@@ -3,6 +3,7 @@ import type { Social } from './social';
 import type { SEO } from './seo';
 import type { Script } from './script';
 import type { User } from './user';
+import type { i18n } from './i18n';
 
 export interface Config {
 	/**
@@ -12,6 +13,10 @@ export interface Config {
 	 * @see https://linksharer.js.org/docs/templates
 	 */
 	template: string;
+	/**
+	 * Internationalization strings
+	 */
+	i18n: i18n;
 	/**
 	 * CNAME to use
 	 *

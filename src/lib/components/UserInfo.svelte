@@ -1,11 +1,18 @@
 <script lang="ts">
-	import type { User } from '$lib/types/config';
+	import type { i18n } from '$lib/types/i18n';
+	import type { User } from '$lib/types/user';
 
 	export let user: User;
+	export let i18n: i18n;
 </script>
 
 <header itemscope itemtype="http://schema.org/Person" class="user-info">
-	<img src={user.avatar} alt="{user.name}'s Avatar" width="100px" height="100px" />
+	<img
+		src={user.avatar}
+		alt={i18n.avatar.alt.replace('{{userName}}', user.name)}
+		width="100px"
+		height="100px"
+	/>
 	<h1 itemprop="name">{@html user.name}</h1>
 	<p itemprop="description">{@html user.bio}</p>
 </header>

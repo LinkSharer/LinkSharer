@@ -13,7 +13,9 @@
 		width="100px"
 		height="100px"
 	/>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<h1 itemprop="name">{@html user.name}</h1>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<p itemprop="description">{@html user.bio}</p>
 </header>
 

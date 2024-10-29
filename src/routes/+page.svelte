@@ -6,6 +6,7 @@
 	import '@fortawesome/fontawesome-free/css/all.min.css';
 	import Socials from '$lib/components/Socials.svelte';
 	import { dev } from '$app/environment';
+	import type { Script } from '$lib/types/script';
 
 	export let data;
 
@@ -13,7 +14,7 @@
 		? `https://linksharer.github.io/Templates/templates/${data.config.template.slice(1)}.css`
 		: data.config.template;
 
-	let scripts: { head: { [key: string]: any }[]; body: { [key: string]: any }[] } = {
+	let scripts: { head: Script[]; body: Script[] } = {
 		head: [],
 		body: [],
 	};
@@ -31,8 +32,8 @@
 	<link rel="stylesheet" href={template} />
 
 	{#if scripts.head}
-		{#each scripts.head as scr}
-			<script {...scr}></script>
+		{#each scripts.head as attributes}
+			<script {...attributes}></script>
 		{/each}
 	{/if}
 </svelte:head>
@@ -62,8 +63,8 @@
 </div>
 
 {#if scripts.body}
-	{#each scripts.body as scr}
-		<script {...scr}></script>
+	{#each scripts.body as attributes}
+		<script {...attributes}></script>
 	{/each}
 {/if}
 

@@ -10,5 +10,5 @@ export interface Script {
 	/**
 	 * Any other key-value pair like `async` or `defer`
 	 */
-	[key: string]: any;
+	[key: string]: string | boolean;
 }

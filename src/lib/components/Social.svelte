@@ -12,7 +12,7 @@
 		rel="noopener noreferrer"
 		aria-label={social.name}
 	>
-		<i class={social.icon} />
+		<i class={social.icon}></i>
 	</a>
 </li>
 

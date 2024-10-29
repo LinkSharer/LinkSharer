@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { i18n } from '$lib/types/i18n';
+	import type { i18n as i18nType } from '$lib/types/i18n';
 
 	export let showCredits: boolean;
-	export let i18n: i18n;
+	export let i18n: i18nType;
 </script>
 
 {#if showCredits}

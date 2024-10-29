@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { i18n } from '$lib/types/i18n';
+	import type { i18n as i18nType } from '$lib/types/i18n';
 	import type { User } from '$lib/types/user';
 
 	export let user: User;
-	export let i18n: i18n;
+	export let i18n: i18nType;
 </script>
 
 <header itemscope itemtype="http://schema.org/Person" class="user-info">

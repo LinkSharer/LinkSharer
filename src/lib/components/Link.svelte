@@ -18,7 +18,7 @@
 		itemprop={link.sameAs ? 'sameAs' : undefined}
 		{rel}
 	>
-		<i class={link.icon} />
+		<i class={link.icon}></i>
 		{link.name}
 	</a>
 </li>

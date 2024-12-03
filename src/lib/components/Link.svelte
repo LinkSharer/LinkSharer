@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import type { Link } from '$lib/types/link';
 
 	export let link: Link;
@@ -9,6 +10,13 @@
 	]
 		.filter(Boolean)
 		.join(' ');
+
+	const goTo = (e: Event) => {
+		if (link.short) {
+			e.preventDefault();
+			goto(link.short);
+		}
+	};
 </script>
 
 <li class="link">
@@ -17,6 +25,7 @@
 		target="_{link.target ?? 'self'}"
 		itemprop={link.sameAs ? 'sameAs' : undefined}
 		{rel}
+		on:click={goTo}
 	>
 		<i class={link.icon}></i>
 		{link.name}

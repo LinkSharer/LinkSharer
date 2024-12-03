@@ -17,4 +17,11 @@ export interface Link extends Social {
 	 * Whether rel="external" should be included in the HTML element or not
 	 */
 	external?: boolean;
+	/**
+	 * A shorter version of the url
+	 * You can also collect analytics if you set config.analytics to true
+	 *
+	 * @see https://linksharer.js.org/docs/urlShortener
+	 */
+	short?: string;
 }

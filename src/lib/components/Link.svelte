@@ -25,7 +25,7 @@
 		target="_{link.target ?? 'self'}"
 		itemprop={link.sameAs ? 'sameAs' : undefined}
 		{rel}
-		on:click={goTo}
+		onclick={goTo}
 	>
 		<i class={link.icon}></i>
 		{link.name}

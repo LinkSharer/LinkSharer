@@ -2,7 +2,6 @@
 	import { browser } from '$app/environment';
 
 	export let data;
-
 	const redirect = () => {
 		window.location.href = data.url;
 	};
@@ -14,7 +13,7 @@
 		on:load={redirect}
 		on:error={redirect}
 	></script>
-	<noscript>
+	<noscript on:load={redirect} on:error={redirect}>
 		<img
 			src="https://queue.simpleanalyticscdn.com/noscript.gif"
 			alt=""

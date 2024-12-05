@@ -14,7 +14,7 @@
 	const goTo = (e: Event) => {
 		if (link.short) {
 			e.preventDefault();
-			goto(link.short);
+			goto(`s/${link.short}`);
 		}
 	};
 </script>

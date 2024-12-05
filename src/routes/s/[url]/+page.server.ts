@@ -1,6 +1,6 @@
 import { dev } from '$app/environment';
 import { error, redirect } from '@sveltejs/kit';
-import config from '../../../user/config.js';
+import config from '../../../../user/config';
 
 export const csr = true;
 

@@ -64,7 +64,7 @@ const config: Config = {
 			icon: 'fa-solid fa-heart',
 			target: 'blank',
 			external: true,
-			short: 'me',
+			short: 'donate',
 		},
 	],
 	socials: [

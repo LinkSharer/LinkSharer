@@ -3,6 +3,7 @@
 
 	export let showCredits: boolean;
 	export let i18n: i18nType;
+	export let version: string;
 </script>
 
 {#if showCredits}
@@ -15,6 +16,7 @@
 			>
 				LinkSharer
 			</a>
+			v{version}
 		</p>
 	</footer>
 {/if}

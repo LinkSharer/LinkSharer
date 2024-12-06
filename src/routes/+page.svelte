@@ -59,7 +59,11 @@
 		{/if}
 	</main>
 
-	<Footer showCredits={data.config.credits || true} i18n={data.config.i18n} />
+	<Footer
+		showCredits={data.config.credits || true}
+		i18n={data.config.i18n}
+		version={data.version}
+	/>
 </div>
 
 {#if scripts.body}

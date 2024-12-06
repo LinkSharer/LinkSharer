@@ -19,18 +19,20 @@
 	};
 </script>
 
-<li class="link">
-	<a
-		href={link.url}
-		target="_{link.target ?? 'self'}"
-		itemprop={link.sameAs ? 'sameAs' : undefined}
-		{rel}
-		onclick={goTo}
-	>
-		<i class={link.icon}></i>
-		{link.name}
-	</a>
-</li>
+{#if link.display !== false}
+	<li class="link">
+		<a
+			href={link.url}
+			target="_{link.target ?? 'self'}"
+			itemprop={link.sameAs ? 'sameAs' : undefined}
+			{rel}
+			onclick={goTo}
+		>
+			<i class={link.icon}></i>
+			{link.name}
+		</a>
+	</li>
+{/if}
 
 <style lang="scss">
 	li {

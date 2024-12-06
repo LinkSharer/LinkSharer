@@ -18,6 +18,11 @@ export interface Link extends Social {
 	 */
 	external?: boolean;
 	/**
+	 * Set this to false to not display the link in the list.
+	 * This is useful if you don't want users to view it but still be able to use the short version of it (and collect analytics).
+	 */
+	display?: boolean;
+	/**
 	 * A shorter version of the url
 	 * You can also collect analytics if you set config.analytics to true
 	 *

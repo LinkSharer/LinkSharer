@@ -6,6 +6,7 @@ const config: Config = {
 	cname: 'demo.linksharer.js.org',
 	i18n,
 	analytics: true,
+	googleSiteVerification: 'SkbQbFxbI39ZoFZR7oEZv9bKJ13TxmN8oj56rISwyZE',
 	seo: {
 		title: 'Demo | LinkSharer',
 		description: "LinkSharer's Demo website.",

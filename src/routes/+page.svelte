@@ -7,6 +7,7 @@
 	import Socials from '$lib/components/Socials.svelte';
 	import { dev } from '$app/environment';
 	import type { Script } from '$lib/types/script';
+	import { config } from 'process';
 
 	export let data;
 
@@ -35,6 +36,11 @@
 		{#each scripts.head as attributes}
 			<script {...attributes}></script>
 		{/each}
+	{/if}
+
+	{#if data.config.googleSiteVerification}
+		<!-- Google verification -->
+		<meta name="google-site-verification" content={data.config.googleSiteVerification} />
 	{/if}
 </svelte:head>
 

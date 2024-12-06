@@ -53,4 +53,10 @@ export interface Config {
 	 * An array of scripts
 	 */
 	scripts?: Script[];
+	/**
+	 * Google site verification.
+	 * Will create a meta tag like `<meta name="google-site-verification" content="..." />` in the head
+	 * @see https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
+	 */
+	googleSiteVerification?: string;
 }

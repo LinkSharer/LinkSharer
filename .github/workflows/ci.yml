@@ -18,14 +18,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - name: Install Dependencies
+        uses: pnpm/action-setup@v4
         with:
-          node-version: 22
-          cache: npm
-
-      - name: Install dependencies
-        run: npm install
+          version: 9
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
 
       - name: Check if CNAME is set
         id: check_cname
@@ -50,7 +49,7 @@ jobs:
           else
             echo "Base path set to '/${{ github.event.repository.name }}'"
           fi
-          npm run build
+          pnpm run build
 
       - name: Create CNAME
         if: env.CNAME != ''

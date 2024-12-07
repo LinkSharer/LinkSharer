@@ -30,7 +30,7 @@
 			{rel}
 			onclick={goTo}
 		>
-			<FontAwesomeIcon icon={link.icon} />
+			<FontAwesomeIcon icon={link.icon} style="width: 1em;" />
 			{link.name}
 		</a>
 	</li>

@@ -14,7 +14,8 @@
 	const goTo = (e: Event) => {
 		if (link.short) {
 			e.preventDefault();
-			link.target !== 'self' ? window.open(`s/${link.short}`) : goto(`s/${link.short}`);
+			const dest = `s/${link.short}`;
+			link.target === 'blank' ? window.open(dest) : goto(dest);
 		}
 	};
 </script>

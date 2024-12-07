@@ -1,4 +1,3 @@
-import { dev } from '$app/environment';
 import { error, redirect } from '@sveltejs/kit';
 import config from '../../../../user/config';
 
@@ -23,7 +22,7 @@ export const load = ({ params }) => {
 		error(404);
 	}
 
-	if (dev && !config.analytics) {
+	if (!config.analytics) {
 		redirect(302, url);
 	}
 

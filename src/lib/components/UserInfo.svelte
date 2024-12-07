@@ -1,14 +1,16 @@
 <script lang="ts">
 	import type { i18n as i18nType } from '$lib/types/i18n';
 	import type { User } from '$lib/types/user';
+	import avatar from '../../../user/avatar.png?enhanced';
 
 	export let user: User;
 	export let i18n: i18nType;
 </script>
 
 <header itemscope itemtype="http://schema.org/Person" class="user-info">
-	<img
-		src={user.avatar}
+	<enhanced:img
+		src={avatar}
+		class="avatar"
 		alt={i18n.avatar.alt.replace('{{userName}}', user.name)}
 		width="100px"
 		height="100px"
@@ -27,7 +29,7 @@
 		text-align: center;
 		line-height: 1.5;
 
-		img {
+		.avatar {
 			margin-bottom: 10px;
 		}
 

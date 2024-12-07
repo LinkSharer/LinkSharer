@@ -7,8 +7,4 @@ export interface User {
 	 * A small description of user
 	 */
 	bio: string;
-	/**
-	 * The avatar to be displayed along the other information about the user
-	 */
-	avatar: string;
 }

@@ -28,7 +28,6 @@ const config: Config = {
 	user: {
 		name: 'LinkSharer',
 		bio: 'This is just a Demo<br>Check out the Docs for more information',
-		avatar: 'avatar.png',
 	},
 	links: [
 		{

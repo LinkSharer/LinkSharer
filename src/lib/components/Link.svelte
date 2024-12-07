@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import type { Link } from '$lib/types/link';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 
 	export let link: Link;
 
@@ -29,7 +30,7 @@
 			{rel}
 			onclick={goTo}
 		>
-			<i class={link.icon}></i>
+			<FontAwesomeIcon icon={link.icon} />
 			{link.name}
 		</a>
 	</li>

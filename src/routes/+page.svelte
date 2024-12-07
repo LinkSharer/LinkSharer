@@ -3,7 +3,6 @@
 	import Links from '$lib/components/Links.svelte';
 	import UserInfo from '$lib/components/UserInfo.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import '@fortawesome/fontawesome-free/css/all.min.css';
 	import Socials from '$lib/components/Socials.svelte';
 	import { dev } from '$app/environment';
 	import type { Script } from '$lib/types/script';

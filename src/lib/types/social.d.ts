@@ -5,10 +5,8 @@ export interface Social {
 	url: string;
 	/**
 	 * The icon to use
-	 *
-	 * @see https://fontawesome.com/search?o=r&m=free
 	 */
-	icon: string;
+	icon: IconDefinition;
 	/**
 	 * The target of the anchor element
 	 */

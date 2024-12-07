@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Social } from '$lib/types/social';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 
 	export let social: Social;
 </script>
@@ -12,7 +13,9 @@
 		rel="noopener noreferrer"
 		aria-label={social.name}
 	>
-		<i class={social.icon}></i>
+		<span>
+			<FontAwesomeIcon icon={social.icon} />
+		</span>
 	</a>
 </li>
 
@@ -29,7 +32,7 @@
 			text-decoration: none;
 			color: inherit;
 
-			i {
+			span {
 				font-size: 30px;
 				transition: font-size 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 

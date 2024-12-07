@@ -1,5 +1,7 @@
 import i18n from '$lib/i18n/en';
 import type { Config } from '../src/lib/types/config';
+import { faFile, faFilePdf, faEnvelope, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const config: Config = {
 	template: '@monochrome',
@@ -33,7 +35,7 @@ const config: Config = {
 		{
 			name: 'Documentation',
 			url: 'https://linksharer.js.org',
-			icon: 'fa-regular fa-file',
+			icon: faFile,
 			sameAs: true,
 			external: true,
 			short: 'docs',
@@ -41,7 +43,7 @@ const config: Config = {
 		{
 			name: 'Github',
 			url: 'https://github.com/LinkSharer/LinkSharer',
-			icon: 'fa-brands fa-github',
+			icon: faGithub,
 			sameAs: true,
 			privacy: true,
 			external: true,
@@ -50,18 +52,18 @@ const config: Config = {
 		{
 			name: 'A cool PDF',
 			url: 'myCoolFile.pdf',
-			icon: 'fa-solid fa-file-pdf',
+			icon: faFilePdf,
 		},
 		{
 			name: 'Email',
 			url: 'mailto:sebastiano@racca.me',
-			icon: 'fa-solid fa-envelope',
+			icon: faEnvelope,
 			sameAs: true,
 		},
 		{
 			name: 'Help Us',
 			url: 'https://racca.me/donate',
-			icon: 'fa-solid fa-heart',
+			icon: faHeart,
 			target: 'blank',
 			external: true,
 			short: 'donate',
@@ -70,12 +72,12 @@ const config: Config = {
 	socials: [
 		{
 			url: 'https://github.com/LinkSharer/LinkSharer',
-			icon: 'fa-brands fa-github',
+			icon: faGithub,
 			name: "LinkSharer's GitHub Account",
 		},
 		{
 			url: 'mailto:sebastiano@racca.me',
-			icon: 'fa-solid fa-envelope',
+			icon: faEnvelope,
 			name: "Sebastiano Racca's Email",
 		},
 	],

@@ -7,7 +7,6 @@
 	import Socials from '$lib/components/Socials.svelte';
 	import { dev } from '$app/environment';
 	import type { Script } from '$lib/types/script';
-	import { config } from 'process';
 
 	export let data;
 

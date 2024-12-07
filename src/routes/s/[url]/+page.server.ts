@@ -2,8 +2,6 @@ import { dev } from '$app/environment';
 import { error, redirect } from '@sveltejs/kit';
 import config from '../../../../user/config';
 
-export const csr = true;
-
 const links = config.links.filter((link) => link.short);
 
 export const entries = async () => {

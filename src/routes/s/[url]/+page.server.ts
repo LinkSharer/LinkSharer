@@ -16,7 +16,7 @@ export const entries = async () => {
 };
 
 export const load = ({ params }) => {
-	const url = links.find((link) => link.short == params.url)?.url as string;
+	let url = links.find((link) => link.short == params.url)?.url as string;
 
 	if (!url) {
 		error(404);
@@ -25,6 +25,19 @@ export const load = ({ params }) => {
 	if (!config.analytics) {
 		redirect(302, url);
 	}
+
+	let newUrl = new URL(url);
+	Object.entries({
+		utm_campaign: 'linksharer_links',
+		utm_medium: 'linksharer_redirect',
+		utm_source: `linksharer_short_${params.url}`,
+	}).forEach(([k, v]) => {
+		if (!newUrl.searchParams.has(k)) {
+			newUrl.searchParams.set(k, v);
+		}
+	});
+
+	url = newUrl.toString();
 
 	return {
 		url,

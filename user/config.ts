@@ -7,7 +7,7 @@ const config: Config = {
 	template: '@monochrome',
 	cname: 'demo.linksharer.js.org',
 	i18n,
-	analytics: true,
+	// analytics: true,
 	googleSiteVerification: 'SkbQbFxbI39ZoFZR7oEZv9bKJ13TxmN8oj56rISwyZE',
 	seo: {
 		title: 'Demo | LinkSharer',

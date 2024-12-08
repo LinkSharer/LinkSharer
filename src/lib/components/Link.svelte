@@ -15,7 +15,7 @@
 	const goTo = (e: Event) => {
 		if (link.short) {
 			e.preventDefault();
-			const dest = `s/${link.short}`;
+			const dest = `s/${link.short}?utm_medium=links_btn&utm_campaign=linksharer_links`;
 			link.target === 'blank' ? window.open(dest) : goto(dest);
 		}
 	};

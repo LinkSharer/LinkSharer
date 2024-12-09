@@ -1,5 +1,5 @@
 import config from '$user/config';
-import { version } from '../../package.json';
+import { version } from '$project/package.json';
 
 export const load = () => {
 	return {

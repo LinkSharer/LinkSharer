@@ -10,6 +10,7 @@ const config = {
 			precompress: true,
 		}),
 		alias: {
+			$project: '.',
 			$user: 'user',
 		},
 	},

@@ -7,13 +7,6 @@ import type { i18n } from './i18n';
 
 export interface Config {
 	/**
-	 * CSS Template to use
-	 *
-	 * @example "@minimal-blue", "myTemplate.css", "https://example.com/myTemplate.css"
-	 * @see https://linksharer.js.org/docs/templates
-	 */
-	template: string;
-	/**
 	 * Internationalization strings
 	 */
 	i18n: i18n;

@@ -9,10 +9,6 @@
 
 	export let data;
 
-	const template = data.config.template.startsWith('@')
-		? `https://linksharer.github.io/Templates/templates/${data.config.template.slice(1)}.css`
-		: data.config.template;
-
 	let scripts: { head: Script[]; body: Script[] } = {
 		head: [],
 		body: [],
@@ -28,8 +24,6 @@
 <Seo seo={data.config.seo} />
 
 <svelte:head>
-	<link rel="stylesheet" href={template} />
-
 	{#if scripts.head}
 		{#each scripts.head as attributes}
 			<script {...attributes}></script>

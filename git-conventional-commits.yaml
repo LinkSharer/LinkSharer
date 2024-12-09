@@ -14,7 +14,12 @@ convention:
     - merge
     - ci
     - revert
-  commitScopes: []
+  commitScopes:
+    - links
+    - build
+    - dependencies
+    - seo
+    - demo
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:

@@ -1,4 +1,4 @@
-import config from '../../user/config';
+import config from '$user/config';
 import { version } from '../../package.json';
 
 export const load = () => {

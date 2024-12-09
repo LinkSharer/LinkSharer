@@ -1,4 +1,4 @@
-import config from '../user/config';
+import config from '$user/config';
 
 export const handle = async ({ event, resolve }) => {
 	return resolve(event, {

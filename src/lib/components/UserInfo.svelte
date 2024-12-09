@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { i18n as i18nType } from '$lib/types/i18n';
 	import type { User } from '$lib/types/user';
-	import avatar from '../../../user/avatar.png?enhanced';
+	import avatar from '$user/avatar.png?enhanced';
 
 	export let user: User;
 	export let i18n: i18nType;

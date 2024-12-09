@@ -9,6 +9,9 @@ const config = {
 		adapter: adapter({
 			precompress: true,
 		}),
+		alias: {
+			$user: 'user',
+		},
 	},
 };
 

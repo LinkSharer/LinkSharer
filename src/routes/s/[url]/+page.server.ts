@@ -1,5 +1,5 @@
 import { error, redirect } from '@sveltejs/kit';
-import config from '../../../../user/config';
+import config from '$user/config';
 
 const links = config.links.filter((link) => link.short);
 

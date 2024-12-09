@@ -18,7 +18,7 @@ export interface Link extends Social {
 	 */
 	external?: boolean;
 	/**
-	 * Set this to false to not display the link in the list.
+	 * Set this to false to not display the link in the list
 	 * This is useful if you don't want users to view it but still be able to use the short version of it (and collect analytics).
 	 */
 	display?: boolean;

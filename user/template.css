@@ -3,49 +3,41 @@
 		background-position: 50px 50px;
 	}
 }
-
 @-moz-keyframes bg-scrolling-reverse {
 	100% {
 		background-position: 50px 50px;
 	}
 }
-
 @-o-keyframes bg-scrolling-reverse {
 	100% {
 		background-position: 50px 50px;
 	}
 }
-
 @keyframes bg-scrolling-reverse {
 	100% {
 		background-position: 50px 50px;
 	}
 }
-
 @-webkit-keyframes bg-scrolling {
 	0% {
 		background-position: 50px 50px;
 	}
 }
-
 @-moz-keyframes bg-scrolling {
 	0% {
 		background-position: 50px 50px;
 	}
 }
-
 @-o-keyframes bg-scrolling {
 	0% {
 		background-position: 50px 50px;
 	}
 }
-
 @keyframes bg-scrolling {
 	0% {
 		background-position: 50px 50px;
 	}
 }
-
 .linksharer {
 	color: #999;
 	font:
@@ -66,33 +58,26 @@
 	-o-animation-timing-function: linear;
 	animation-timing-function: linear;
 }
-
 .user-info {
 	color: #000;
 }
-
 .link {
 	color: #000;
 }
-
 .link:hover {
 	color: #fff;
 }
-
 .link a {
 	background-color: transparent;
 	border: 2px solid #000;
 	border-radius: 10px;
 }
-
 .link a:hover {
 	background-color: #000;
 }
-
 .social {
 	color: #000;
 }
-
 .credits {
 	color: #000;
 }

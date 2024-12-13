@@ -38,7 +38,7 @@
 
 {#if !dev && data.config.analytics}
 	<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-	<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
+	<script async data-full-urls src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 {/if}
 
 <div class="linksharer">

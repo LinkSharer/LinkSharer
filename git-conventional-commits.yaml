@@ -20,6 +20,7 @@ convention:
     - dependencies
     - seo
     - demo
+    - analytics
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:

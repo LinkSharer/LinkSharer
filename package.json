@@ -1,6 +1,6 @@
 {
 	"name": "linksharer",
-	"version": "3.1.1",
+	"version": "3.1.2",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

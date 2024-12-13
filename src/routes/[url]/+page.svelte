@@ -20,6 +20,7 @@
 					url: data.redirect,
 				},
 			}),
+			mode: 'no-cors',
 		}).finally(() => {
 			window.location.href = data.redirect;
 		});

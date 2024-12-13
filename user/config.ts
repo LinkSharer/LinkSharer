@@ -37,6 +37,7 @@ const config: Config = {
 			icon: faFile,
 			sameAs: true,
 			external: true,
+			short: 'docs',
 		},
 		{
 			name: 'Github',
@@ -45,6 +46,7 @@ const config: Config = {
 			sameAs: true,
 			privacy: true,
 			external: true,
+			short: 'gh',
 		},
 		{
 			name: 'A cool PDF',
@@ -63,6 +65,7 @@ const config: Config = {
 			icon: faHeart,
 			target: 'blank',
 			external: true,
+			short: 'donate',
 		},
 	],
 	socials: [

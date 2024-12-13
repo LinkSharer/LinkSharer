@@ -27,23 +27,9 @@ export const load = async ({ params, url }) => {
 	}
 
 	const ua = `LinkSharer v${version}`;
-	await fetch('https://queue.simpleanalyticscdn.com/events', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-			'User-Agent': ua,
-		},
-		body: JSON.stringify({
-			type: 'event',
-			hostname: config.cname, // TODO: add support for websites hosted on github pages
-			ua,
-			path: url.pathname,
-			event: `short_${r}`,
-			metadata: {
-				url: r,
-			},
-		}),
-	});
 
-	redirect(302, r);
+	return {
+		redirect: r,
+		ua,
+	};
 };

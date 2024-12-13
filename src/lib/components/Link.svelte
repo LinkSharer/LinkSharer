@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import type { Link } from '$lib/types/link';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 
@@ -11,14 +10,6 @@
 	]
 		.filter(Boolean)
 		.join(' ');
-
-	const goTo = (e: Event) => {
-		if (link.short) {
-			e.preventDefault();
-			const dest = `s/${link.short}?utm_medium=links_btn&utm_campaign=linksharer_links`;
-			link.target === 'blank' ? window.open(dest) : goto(dest);
-		}
-	};
 </script>
 
 {#if link.display !== false}
@@ -28,7 +19,6 @@
 			target="_{link.target ?? 'self'}"
 			itemprop={link.sameAs ? 'sameAs' : undefined}
 			{rel}
-			onclick={goTo}
 		>
 			<FontAwesomeIcon icon={link.icon} style="width: 1em;" />
 			{link.name}

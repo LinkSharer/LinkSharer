@@ -4,7 +4,6 @@ import { faFile, faFilePdf, faEnvelope, faHeart } from '@fortawesome/free-regula
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const config: Config = {
-	template: '@monochrome',
 	cname: 'demo.linksharer.js.org',
 	i18n,
 	analytics: true,
@@ -38,7 +37,6 @@ const config: Config = {
 			icon: faFile,
 			sameAs: true,
 			external: true,
-			short: 'docs',
 		},
 		{
 			name: 'Github',
@@ -47,7 +45,6 @@ const config: Config = {
 			sameAs: true,
 			privacy: true,
 			external: true,
-			short: 'gh',
 		},
 		{
 			name: 'A cool PDF',
@@ -66,7 +63,6 @@ const config: Config = {
 			icon: faHeart,
 			target: 'blank',
 			external: true,
-			short: 'donate',
 		},
 	],
 	socials: [

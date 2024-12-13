@@ -38,13 +38,7 @@
 
 {#if !dev && data.config.analytics}
 	<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-	<noscript>
-		<img
-			src="https://queue.simpleanalyticscdn.com/noscript.gif"
-			alt=""
-			referrerpolicy="no-referrer-when-downgrade"
-		/>
-	</noscript>
+	<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 {/if}
 
 <div class="linksharer">

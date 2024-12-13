@@ -4,19 +4,19 @@
 
 	export let link: Link;
 
-	const rel = [
-		link.privacy ? 'noopener noreferrer' : undefined,
-		link.external ? 'external' : undefined,
-	]
-		.filter(Boolean)
-		.join(' ');
+	const rel =
+		link.privacy || link.external
+			? [link.privacy ? 'noopener noreferrer' : undefined, link.external ? 'external' : undefined]
+					.filter(Boolean)
+					.join(' ')
+			: undefined;
 </script>
 
 {#if link.display !== false}
 	<li class="link">
 		<a
 			href={link.url}
-			target="_{link.target ?? 'self'}"
+			target={link.target ? `_${link.target}` : undefined}
 			itemprop={link.sameAs ? 'sameAs' : undefined}
 			{rel}
 		>

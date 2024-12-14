@@ -10,6 +10,10 @@ LinkSharer is an open-source project that lets you create your own web page to s
 - Full documentation can be found [here](https://linksharer.js.org).
 - A live demo can be found [here](https://demo.linksharer.js.org?utm_source=github&utm_medium=readme&utm_campaign=main_repository&utm_content=button_link).
 
+## Contributing
+
+Follow the [contributing guide](https://linksharer.js.org/docs/contributing) to know how to contribute to this project.
+
 ## License
 
 This project is under the [MIT License](./LICENSE)

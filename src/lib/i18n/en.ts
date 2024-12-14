@@ -6,6 +6,9 @@ const en: i18n = {
 	avatar: {
 		alt: "{{userName}}'s Avatar",
 	},
+	redirect: {
+		title: 'Redirecting...',
+	},
 };
 
 export default en;

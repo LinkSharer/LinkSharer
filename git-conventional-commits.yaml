@@ -21,6 +21,7 @@ convention:
     - seo
     - demo
     - analytics
+    - i18n
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:

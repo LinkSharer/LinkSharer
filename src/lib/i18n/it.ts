@@ -6,6 +6,9 @@ const it: i18n = {
 	avatar: {
 		alt: 'Avatar di {{userName}}',
 	},
+	redirect: {
+		title: 'Reindirizzamento...',
+	},
 };
 
 export default it;

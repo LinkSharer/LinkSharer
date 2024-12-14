@@ -31,5 +31,5 @@
 </script>
 
 <svelte:head>
-	<title>Redirecting...</title>
+	<title>{data.i18n.title}</title>
 </svelte:head>

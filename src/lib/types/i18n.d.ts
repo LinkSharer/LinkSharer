@@ -7,4 +7,7 @@ export interface i18n {
 	avatar: {
 		alt: string;
 	};
+	redirect: {
+		title: string;
+	};
 }

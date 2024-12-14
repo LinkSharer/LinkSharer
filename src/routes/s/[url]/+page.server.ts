@@ -31,5 +31,6 @@ export const load = async ({ params, url }) => {
 	return {
 		redirect: r,
 		ua,
+		i18n: config.i18n.redirect,
 	};
 };

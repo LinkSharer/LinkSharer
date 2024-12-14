@@ -3,7 +3,12 @@
 
 	export let data;
 
+	const redirect = () => (window.location.href = data.redirect);
+
 	onMount(() => {
+		if (parseInt(navigator.doNotTrack || '0', 10) === 1) {
+			redirect();
+		}
 		fetch('https://queue.simpleanalyticscdn.com/events', {
 			method: 'POST',
 			headers: {
@@ -21,9 +26,7 @@
 				},
 			}),
 			mode: 'no-cors',
-		}).finally(() => {
-			window.location.href = data.redirect;
-		});
+		}).finally(redirect);
 	});
 </script>
 

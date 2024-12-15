@@ -22,6 +22,7 @@ convention:
     - demo
     - analytics
     - i18n
+    - tools
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:

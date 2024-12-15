@@ -1,33 +1,75 @@
 import { select, confirm } from '@inquirer/prompts';
 import path from 'path';
 import fs from 'fs';
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 
 const TEMPLATE_PATH = path.join('user', 'template.css');
-const TEMPLATES_URL = 'https://linksharer.github.io/Templates';
+const TEMPLATES_URL = 'https://templates.linksharer.js.org';
 
-const getTemplatesList = async (): Promise<string[]> =>
-	(await fetch(`${TEMPLATES_URL}/templates.json`)).json();
-const getTemplate = async (template: string) =>
-	(await fetch(`${TEMPLATES_URL}/templates/${template}.css`)).text();
+const getTemplatesList = async (): Promise<string[]> => {
+	const response = await fetch(`${TEMPLATES_URL}/templates.json`);
+	if (!response.ok) throw new Error('Failed to fetch templates list');
+	return response.json();
+};
 
-let proceed = true;
+const getTemplate = async (template: string): Promise<string> => {
+	const response = await fetch(`${TEMPLATES_URL}/templates/${template}.css`);
+	if (!response.ok) throw new Error(`Failed to fetch template: ${template}`);
+	return response.text();
+};
 
-if (fs.existsSync(TEMPLATE_PATH)) {
-	proceed = await confirm({
-		message: `This action will override ${TEMPLATE_PATH}`,
-	});
-}
+const main = async () => {
+	const argv = yargs(hideBin(process.argv))
+		.option('yes', {
+			alias: 'y',
+			type: 'boolean',
+			description: 'Skip confirmation if the template already exists',
+			default: false,
+		})
+		.option('template', {
+			alias: 't',
+			type: 'string',
+			description: 'Specify the template to use directly',
+		})
+		.version(false)
+		.help()
+		.alias('help', 'h')
+		.parseSync();
 
-if (!proceed) {
-	console.log('Abort.');
-	process.exit(1);
-}
+	// Check if template file already exists
+	if (!argv.yes && fs.existsSync(TEMPLATE_PATH)) {
+		const proceed = await confirm({
+			message: `This action will override ${TEMPLATE_PATH}. Continue?`,
+		});
+		if (!proceed) {
+			console.log('Abort.');
+			process.exit(1);
+		}
+	}
 
-const template = await select({
-	message: 'Select a template',
-	choices: (await getTemplatesList()).map((template) => {
-		return { name: template, value: template };
-	}),
-});
+	let selectedTemplate: string;
 
-fs.writeFileSync(TEMPLATE_PATH, await getTemplate(template));
+	// Use provided template or prompt user for selection
+	if (argv.template) {
+		selectedTemplate = argv.template;
+		console.log(`Using template: ${selectedTemplate}`);
+	} else {
+		const templatesList = await getTemplatesList();
+		selectedTemplate = await select({
+			message: 'Select a template',
+			choices: templatesList.map((template) => ({ name: template, value: template })),
+		});
+	}
+
+	try {
+		const templateContent = await getTemplate(selectedTemplate);
+		fs.writeFileSync(TEMPLATE_PATH, templateContent);
+		console.log(`Template ${selectedTemplate} has been written to ${TEMPLATE_PATH}`);
+	} catch (error) {
+		console.error(`Error: ${error.message}`);
+		process.exit(1);
+	}
+};
+
+main();

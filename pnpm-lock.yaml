@@ -15,8 +15,8 @@ importers:
         specifier: ^6.7.1
         version: 6.7.1
       '@fortawesome/free-regular-svg-icons':
-        specifier: ^6.7.1
-        version: 6.7.1
+        specifier: ^6.7.2
+        version: 6.7.2
       '@fortawesome/svelte-fontawesome':
         specifier: ^0.2.3
         version: 0.2.3(@fortawesome/fontawesome-svg-core@6.7.1)(svelte@5.10.1)
@@ -423,6 +423,10 @@ packages:
     resolution: {integrity: sha512-gbDz3TwRrIPT3i0cDfujhshnXO9z03IT1UKRIVi/VEjpNHtSBIP2o5XSm+e816FzzCFEzAxPw09Z13n20PaQJQ==}
     engines: {node: '>=6'}
 
+  '@fortawesome/fontawesome-common-types@6.7.2':
+    resolution: {integrity: sha512-Zs+YeHUC5fkt7Mg1l6XTniei3k4bwG/yo3iFUtZWd/pMx9g3fdvkSK9E0FOC+++phXOka78uJcYb8JaFkW52Xg==}
+    engines: {node: '>=6'}
+
   '@fortawesome/fontawesome-svg-core@6.7.1':
     resolution: {integrity: sha512-8dBIHbfsKlCk2jHQ9PoRBg2Z+4TwyE3vZICSnoDlnsHA6SiMlTwfmW6yX0lHsRmWJugkeb92sA0hZdkXJhuz+g==}
     engines: {node: '>=6'}
@@ -431,8 +435,8 @@ packages:
     resolution: {integrity: sha512-nJR76eqPzCnMyhbiGf6X0aclDirZriTPRcFm1YFvuupyJOGwlNF022w3YBqu+yrHRhnKRpzFX+8wJKqiIjWZkA==}
     engines: {node: '>=6'}
 
-  '@fortawesome/free-regular-svg-icons@6.7.1':
-    resolution: {integrity: sha512-e13cp+bAx716RZOTQ59DhqikAgETA9u1qTBHO3e3jMQQ+4H/N1NC1ZVeFYt1V0m+Th68BrEL1/X6XplISutbXg==}
+  '@fortawesome/free-regular-svg-icons@6.7.2':
+    resolution: {integrity: sha512-7Z/ur0gvCMW8G93dXIQOkQqHo2M5HLhYrRVC0//fakJXxcF1VmMPsxnG6Ee8qEylA8b8Q3peQXWMNZ62lYF28g==}
     engines: {node: '>=6'}
 
   '@fortawesome/svelte-fontawesome@0.2.3':
@@ -1992,6 +1996,8 @@ snapshots:
 
   '@fortawesome/fontawesome-common-types@6.7.1': {}
 
+  '@fortawesome/fontawesome-common-types@6.7.2': {}
+
   '@fortawesome/fontawesome-svg-core@6.7.1':
     dependencies:
       '@fortawesome/fontawesome-common-types': 6.7.1
@@ -2000,9 +2006,9 @@ snapshots:
     dependencies:
       '@fortawesome/fontawesome-common-types': 6.7.1
 
-  '@fortawesome/free-regular-svg-icons@6.7.1':
+  '@fortawesome/free-regular-svg-icons@6.7.2':
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.7.1
+      '@fortawesome/fontawesome-common-types': 6.7.2
 
   '@fortawesome/svelte-fontawesome@0.2.3(@fortawesome/fontawesome-svg-core@6.7.1)(svelte@5.10.1)':
     dependencies:

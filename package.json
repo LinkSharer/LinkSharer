@@ -18,7 +18,7 @@
 		"@inquirer/prompts": "^7.2.1",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/enhanced-img": "^0.4.4",
-		"@sveltejs/kit": "^2.12.1",
+		"@sveltejs/kit": "^2.15.2",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
 		"@types/eslint": "^9.6.0",
 		"@types/node": "^22.10.5",

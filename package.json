@@ -15,7 +15,7 @@
 		"husky": "husky"
 	},
 	"devDependencies": {
-		"@inquirer/prompts": "^7.2.3",
+		"@inquirer/prompts": "^7.3.2",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/enhanced-img": "^0.4.4",
 		"@sveltejs/kit": "^2.16.1",

@@ -1,6 +1,7 @@
 {
 	"name": "linksharer",
-	"version": "3.5.0",
+	"version": "3.5.1",
+	"type": "module",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -39,16 +40,20 @@
 		"vite": "^5.4.12",
 		"yargs": "^17.7.2"
 	},
-	"pnpm": {
-		"overrides": {
-			"cookie": "0.7.0"
-		}
-	},
-	"type": "module",
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.7.2",
 		"@fortawesome/free-regular-svg-icons": "^6.7.2",
 		"@fortawesome/svelte-fontawesome": "^0.2.3",
 		"sass": "^1.83.4"
-	}
+	},
+	"pnpm": {
+		"overrides": {
+			"cookie": "0.7.0",
+			"esbuild": ">=0.25.0"
+		},
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	},
+	"packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
